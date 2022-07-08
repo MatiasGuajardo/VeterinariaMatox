@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">Veterinaria</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/about">Acerca</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        {{#if user}}
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Notas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/notes">Todas las notas</a>
+              <a class="dropdown-item" href="/notes/dueno">Nombres dueños</a>
+              <a class="dropdown-item" href="/notes/detalles">Detalles</a>
+              <a class="dropdown-item" href="/notes/razas">Razas</a>
+              <a class="dropdown-item" href="/notes/tamano">tamaño</a>
+              <a class="dropdown-item" href="/notes/add">Agregar una nota</a>
+              <a class="dropdown-item" href="/notes/borrar">Borrar pequeño</a>
+              <a class="dropdown-item" href="/notes/borrarm">Borrar mediano</a>
+              <a class="dropdown-item" href="/notes/borrarg">Borrar grande</a>
+              <a class="dropdown-item" href="/notes/actuaran">Pequeño a Mediano</a>
+              <a class="dropdown-item" href="/notes/actuaranm">Mediano a Grande</a>
+              <a class="dropdown-item" href="/notes/actuarang">Grande a Pequeño</a>
+              <a class="dropdown-item" href="/users/logout">Cerrar sesion</a>
+            </ul>
+          </li>
+
+
+
+
+        {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signin">Iniciar sesion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/users/signup">Registrar</a>
+          </li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
